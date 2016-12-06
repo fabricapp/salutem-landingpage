@@ -212,7 +212,7 @@ body.background {
     left: 0;
     position: absolute;
     right: 0;
-    top: 95px;
+    top: 45px;
     z-index: 999999;
 }
 #main-menu.stick {

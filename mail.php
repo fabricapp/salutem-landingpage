@@ -11,6 +11,8 @@ $subject = "Contacto Salutem Desde Salutem.cl";
 
 $mailheader = "De: $email \r\n";
 
+//var_dump(mail($recipient, $subject, $formcontent, $mailheader));exit();
+
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 
 header("location: index.html"); 
