@@ -3,17 +3,26 @@ $name    = $_POST['name'];
 $email   = $_POST['email'];
 $message = $_POST['message'];
 
+$to      = 'contacto@salutem.cl';
+$subject = 'Contacto Salutem Desde Salutem.cl';
+$message = "De: $name \n Email: $email \n Mensaje: $message";
 
-$formcontent = " De: $name \n Email: $email \n Mensaje: $message";
-$recipient   = "contacto@salutem.cl";
+$headers = 'From: ' . $email . "\r\n" .
+    'Reply-To: ' . $email . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-$subject = "Contacto Salutem Desde Salutem.cl";
+mail($to, $subject, $message, $headers);
 
-$mailheader = "De: $email \r\n";
+header("location: mensaje-enviado.html"); 
 
-//var_dump(mail($recipient, $subject, $formcontent, $mailheader));exit();
+// $formcontent = " De: $name \n Email: $email \n Mensaje: $message";
+// $recipient   = "contacto@salutem.cl";
 
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+// $subject = "Contacto Salutem Desde Salutem.cl";
 
-header("location: index.html"); 
+// $mailheader = "From: $email \r\n";
+
+// mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+
+// header("location: mensaje-enviado.html"); 
 ?>

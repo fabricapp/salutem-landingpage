@@ -377,7 +377,7 @@ header .menu-btn {
 /*--------------------------------------------*/
 /*  4. About Area
 /*--------------------------------------------*/
-.about-area {padding-top: 114px;}
+.about-area {padding-top: 50px;}
 .about-area .col-sm-5 {padding-left: 0}
 .about-image {margin-right: 45px}
 .about-text h2 {
@@ -789,7 +789,7 @@ header .menu-btn {
 /*--------------------------------------------*/
 /*  10. Screenshot Area
 /*--------------------------------------------*/
-.screenshots-area {padding-top: 117px}
+.screenshots-area {padding-top: 0px}
 .sin-screenshot {z-index: 9}
 .sin-screenshot a {display: block; position: relative}
 .sin-screenshot a:before {
@@ -1372,3 +1372,12 @@ textarea.form-control {
     border: 1px solid #2D3E50
 }
 #scrollUp:hover {background-color: #fff; color: #2D3E50}
+
+.security-area {
+    background: url("img/banner-blue/security.jpg")!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+}
